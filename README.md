@@ -24,5 +24,12 @@ data/
     └── buildings_grid_wwr.csv
 ```
 
-仓库仅包含结果数据，不包含模型权重、API 密钥、访问令牌或运行日志。
+## 下载与校验
 
+```bash
+gh release download v1.0.0 --repo Aspartame-yao/nanshan-street-view-segmentation-results
+shasum -a 256 -c RELEASE_ASSETS.sha256
+for file in *part-*.tar; do tar -xf "$file"; done
+```
+
+仓库仅包含结果数据，不包含模型权重、API 密钥、访问令牌或运行日志。
